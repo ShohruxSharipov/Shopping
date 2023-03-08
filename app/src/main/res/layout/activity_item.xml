@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".item_activity"
+    android:background="@drawable/img_1"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/img"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_weight="1"
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        app:cardCornerRadius="30dp"
+        android:elevation="20dp">
+
+        <TextView
+            android:layout_width="337dp"
+            android:layout_height="434dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:textSize="23sp"
+            android:text="HDR display
+True Tone
+Wide color (P3)
+Haptic Touch
+2,000,000:1 contrast ratio (typical)
+800 nits max brightness (typical); 1200 nits peak brightness (HDR)
+Fingerprint-resistant oleophobic coating
+Support for display of multiple languages and characters simultaneously" />
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Shopping</string>
+    <string name="Select_language">Select language</string>
+    <string name="Next">Next</string>
+    <string name="Search">Search</string>
+    <string name="check">Check in to our program</string>
+    <string name="number">Phone number</string>
+    <string name="password">password</string>
+</resources>

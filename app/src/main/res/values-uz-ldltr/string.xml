@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shopping</string>
+    <string name="Select_language">Tilni tanlang</string>
+    <string name="Next">Keyingi</string>
+    <string name="Search">Qidiruv</string>
+    <string name="check">Dasturdan royxatdan oting</string>
+    <string name="number">Telefon raqam</string>
+    <string name="password">Parol</string>
+</resources>
