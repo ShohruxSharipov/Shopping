@@ -2,6 +2,7 @@ package com.example.shopping
 
 import  android.app.Activity
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import coil.load
 import com.example.shopping.databinding.ActivityMainBinding
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -32,9 +34,24 @@ class MainActivity : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
                 if (lang[p2] == "English"){
-                    var context = LocaleHelper(this@MainActivity,"en")
-                    var  resources = context::class.java.classLoader.getResources("")
-                }else Toast.makeText(this@MainActivity, "UZ", Toast.LENGTH_SHORT).show()
+                    val locale = Locale("en")
+                    Locale.setDefault(locale)
+                    val config = Configuration()
+                    config.locale = locale
+                    baseContext.resources.updateConfiguration(
+                        config,
+                        baseContext.resources.displayMetrics
+                    )
+                }else{
+                    val locale = Locale("uz")
+                    Locale.setDefault(locale)
+                    val config = Configuration()
+                    config.locale = locale
+                    baseContext.resources.updateConfiguration(
+                        config,
+                        baseContext.resources.displayMetrics
+                    )
+                }
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
