@@ -52,7 +52,9 @@ class registration : AppCompatActivity() {
                 edit.putString("Users",s).commit()
                 var intent = Intent(this, Code::class.java)
                 startActivity(intent)
+                finish()
             }
         }
+
     }
 }

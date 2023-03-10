@@ -2,6 +2,7 @@ package com.example.shopping
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -9,6 +10,7 @@ import android.os.Looper
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import java.util.*
 
 class Splash : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -25,8 +27,15 @@ class Splash : AppCompatActivity() {
 
         handler.postDelayed({
             var cache = getSharedPreferences("Cache", MODE_PRIVATE)
-            var str = cache.getString("Users","")
+            var str = cache.getString("language","")
             if (str != ""){
+                var locale = Locale(str)
+                Locale.setDefault(locale)
+                val config = Configuration()
+                config.locale = locale
+                baseContext.resources.updateConfiguration(
+                    config,
+                    baseContext.resources.displayMetrics)
                 var intent = Intent(this,Code::class.java)
                 startActivity(intent)
             }else{

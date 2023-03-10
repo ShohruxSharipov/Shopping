@@ -31,8 +31,9 @@ class item_activity : AppCompatActivity() {
             card.animation = anim
             card.visibility = View.INVISIBLE
             handler.postDelayed({
-                val intent = Intent(this,MainActivity2::class.java)
-                startActivity(intent)
+                onBackPressedDispatcher.onBackPressed()
+//                val intent = Intent(this,MainActivity2::class.java)
+//                startActivity(intent)
                 finish()
             },400)
         }
