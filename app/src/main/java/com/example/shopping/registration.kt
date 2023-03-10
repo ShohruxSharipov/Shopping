@@ -39,7 +39,7 @@ class registration : AppCompatActivity() {
                 Log.d("TAG", "login : "+login)
                 Log.d("TAG", "pasword : "+password)
                 Log.d("TAG", "number : "+number)
-                Toast.makeText(this, "Fill all", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Fill", Toast.LENGTH_SHORT).show()
             } else {
                 var str = cache.getString("Users","")
                 if (str == ""){

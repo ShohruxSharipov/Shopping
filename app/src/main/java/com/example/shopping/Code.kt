@@ -60,10 +60,12 @@ class Code : AppCompatActivity(),OnClickListener{
                 edit.putString("code", pass).apply()
                 var intent = Intent(this,MainActivity2::class.java)
                 startActivity(intent)
+                finish()
             }else {
                 if (str == pass){
                     var intent = Intent(this,MainActivity2::class.java)
                     startActivity(intent)
+                    finish()
                 }else binding.code.startAnimation(AnimationUtils.loadAnimation(this,R.anim.anim4))
             }
             pass = ""
@@ -72,6 +74,7 @@ class Code : AppCompatActivity(),OnClickListener{
             }
             n=0
         }
+
     }
     fun backspace(btn:Button){
         if(pass.isNotEmpty()){

@@ -16,12 +16,15 @@ class MainActivity2 : AppCompatActivity() {
     lateinit var binding: ActivityMain2Binding
     var list = mutableListOf<goods>()
     lateinit var search: EditText
+    var parent = mutableMapOf<String,goods>()
+    var parent_names = mutableListOf<String>()
+    var photos = mutableListOf<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         val anim = AnimationUtils.loadAnimation(this,R.anim.anim)
-        binding.RV.animation = anim
+//        binding.RV.animation = anim
         list.add(goods("https://assets.stickpng.com/images/61d2f85b92b57c0004c64745.png","iPhone 13","790 $"))
         list.add(goods("https://www.transparentpng.com/thumb/iphone-7/black-iphone-7-plus-transparent-free-WNS7Z9.png","iPhone 7+","550 $"))
         list.add(goods("https://cdn.shopify.com/s/files/1/1684/4603/products/samsungGalaxyA30_Black.png?v=1620369553","Samsung A30","600 $"))
@@ -55,8 +58,6 @@ class MainActivity2 : AppCompatActivity() {
             var intent = Intent(this,item_activity::class.java)
             startActivity(intent)
         }
-
-
     }
 
 
